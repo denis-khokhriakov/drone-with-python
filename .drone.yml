@@ -16,8 +16,7 @@ steps:
   - mkdir -p coverage
   - nosetests -v tests/
 
-- name: frontend
-  image: node
+- name: shell
+  image: node:8.10
   commands:
-  - npm install
-  - npm test
+  - npm run test
