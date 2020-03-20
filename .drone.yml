@@ -16,8 +16,7 @@ steps:
   - mkdir -p coverage
   - nosetests -v tests/
 
-- name: frontend
-  image: node
+- name: shell
+  image: drone/cli:1.2.0-alpine
   commands:
-  - npm install
-  - npm test
+  - echo "Hello World"
